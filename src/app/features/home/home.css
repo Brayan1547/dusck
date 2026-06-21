@@ -1,0 +1,119 @@
+.principal-home {
+  font-family: 'Arial', sans-serif; /* Tipo de letra  */
+  background-color: #ffffff; /* Fondo de la página */
+}
+
+
+.seccion-destacada {
+  background-color: #111111; /* Color  */
+  height: 500px; /* Qué tan alto es el letrero negro */
+  display: flex; /* Truco para poder mover lo que está adentro */
+  align-items: center; /* Centra los textos de arriba a abajo */
+  justify-content: center; /* Centra los textos de izquierda a derecha */
+  text-align: center; /* Alinea las letras al centro */
+  color: white; /* Letras de color blanco */
+}
+
+/* El título gigante de DUSCK */
+.contenido h1 {
+  font-size: 4rem; /* Tamaño de la letra (bien grande) */
+  font-weight: 900; /* Qué tan gruesa o negrita es la letra */
+  letter-spacing: -2px; /* Junta un poquito las letras para que se vea moderno */
+  margin-bottom: 10px; /* Espacio de separación con el texto de abajo */
+}
+
+/* El texto mediano del banner */
+.contenido p {
+  font-size: 1.2rem; /* Tamaño del texto */
+  letter-spacing: 2px; /* Separa un poquito las letras */
+  margin-bottom: 30px; /* Espacio de separación con el botón */
+  color: #cccccc; /* Color gris claro para que no brille tanto como el título */
+}
+
+/* El botón blanco que dice VER TODO */
+.btn-shop {
+  background-color: white; /* Botón de color blanco */
+  color: black; /* Letras negras adentro del botón */
+  border: none; /* Le quita un borde feo que viene por defecto */
+  padding: 15px 40px; /* Tamaño del botón (alto y ancho) */
+  font-weight: bold; /* Letra en negrita */
+  cursor: pointer; /* Hace que el mouse cambie a la manito de hacer clic */
+  text-transform: uppercase; /* Vuelve el texto mayúscula obligatoria */
+  transition: 0.3s; /* Hace que los cambios de color sean suaves, no de golpe */
+}
+
+/* Lo que pasa cuando pones el mouse encima del botón blanco */
+.btn-shop:hover {
+  background-color: #004BEE; /* El botón cambia a tu azul llamativo Dusck */
+  color: white; /* Las letras del botón pasan a ser blancas */
+}
+
+
+/* --- LA SECCIÓN DONDE ESTÁ LA ROPA --- */
+.categoria-ropa {
+  padding: 80px 20px; /* Espacio libre arriba/abajo y a los lados para que no quede pegado al borde */
+  max-width: 1200px; /* Ancho máximo de la página para que no se desarme en pantallas gigantes */
+  margin: 0 auto; /* Centra todo este bloque en la mitad de la pantalla */
+}
+
+/* El título que dice "NUESTRAS CATEGORÍAS" */
+.section-titulo {
+  font-size: 1.5rem; /* Tamaño del título */
+  margin-bottom: 40px; /* Espacio para que no quede pegado a los bloques de ropa */
+  font-weight: 800; /* Letra bien gruesa */
+  border-left: 5px solid #004BEE; /* Una rayita vertical azul al lado izquierdo del título */
+  padding-left: 15px; /* Separa el título de la rayita azul */
+}
+
+/* La cuadrícula o rejilla invisible que acomoda los 3 bloques */
+.categoria-nino {
+  display: grid; /* Activa el modo cuadrícula */
+  grid-template-columns: repeat(3, 1fr); /* Divide el espacio en 3 columnas exactamente iguales */
+  gap: 20px; /* El espacio o separación que hay entre cada cuadro de ropa */
+}
+
+
+/* --- LOS 3 BLOQUES DE ROPA (El molde de las tarjetas) --- */
+.bloque-nino, .categoria-elegante, .categoria-urbana {
+  height: 450px; /* El alto que va a tener cada cuadro de ropa */
+  position: relative; /* Regula el comportamiento para que no se salgan las cosas */
+  cursor: pointer; /* Pone la manito para hacer clic */
+  display: flex; /* Activa el modo caja para mover el texto interno */
+  align-items: flex-end; /* Empuja el cuadrito blanco del texto hacia el fondo del bloque */
+  transition: 0.4s; /* Hace que el efecto de movimiento al pasar el mouse sea suave */
+}
+
+/* Colores de fondo individuales para que los diferencies en pantalla */
+.bloque-nino { background-color: #e0e0e0; } /* Gris para niño */
+.categoria-elegante { background-color: #d8d8d8; } /* Gris medio para elegante */
+.categoria-urbana { background-color: #cfcfcf; } /* Gris oscuro para urbano */
+
+/* El efecto genial de Adidas: cuando pasas el mouse, la tarjeta se agranda un poquito */
+.bloque-nino:hover, .categoria-elegante:hover, .categoria-urbana:hover {
+  transform: scale(1.02); /* Agranda la tarjeta un 2% */
+}
+
+
+/* --- LOS CUADRITOS BLANCOS INTERNOS (nino1, elegante1, urbano1) --- */
+.nino1, .elegante1, .urbano1 {
+  background-color: white; /* Cuadro de color blanco */
+  margin: 20px; /* Separa el cuadro blanco de los bordes del bloque gris */
+  padding: 20px; /* Espacio interno para que las letras respiren */
+  width: 100%; /* Hace que ocupe todo el ancho disponible */
+}
+
+/* Los títulos dentro del cuadro blanco ("COLECCIÓN NIÑO", etc.) */
+.nino1 h3, .elegante1 h3, .urbano1 h3 {
+  font-size: 1.1rem; /* Tamaño de la letra */
+  margin-bottom: 10px; /* Separa el título del texto "Explorar" */
+  font-weight: 700; /* Letra gruesa */
+}
+
+/* El texto azul que dice "Explorar" */
+.btn-ver {
+  color: #004BEE; /* Letras de color azul Dusck */
+  font-weight: bold; /* Letra en negrita */
+  text-transform: uppercase; /* Letras en mayúscula */
+  font-size: 0.9rem; /* Tamaño del texto un poco más pequeño */
+  border-bottom: 2px solid #004BEE; /* Una línea azul debajo de la palabra */
+}
