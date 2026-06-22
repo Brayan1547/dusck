@@ -1,0 +1,114 @@
+/* 1. CONTENEDOR PRINCIPAL DEL HEADER*/
+.header-dusck {
+  background-color: #ffffff; 
+  border-bottom: 1px solid #eeeeee; /* Pinta una línea gris muy delgada abajo para separarlo del banner negro */
+  position: sticky; /* hace que el menu se quede pegado arriba  */
+  top: 0; /* Indica que se quede pegado exactamente en el borde superior */
+  z-index: 1000; /* asegura que el menú siempre flote por encima de las fotos del Main */
+  font-family: 'Arial', sans-serif; /* El mismo tipo de letra que usas en el resto de la página */
+}
+
+.header-contenedor {
+  max-width: 1200px; /* Hace que el contenido del menú mida máximo lo mismo que tus categorías en el Main */
+  margin: 0 auto; /* Centra automáticamente todo el contenedor en la mitad de la pantalla */
+  display: flex; /* Activa el modo caja flexible para poder alinear el logo, el menú y los íconos en fila */
+  justify-content: space-between; /* Empuja el logo a la izquierda, el menú al centro y los íconos a la derecha */
+  align-items: center; /* Centra verticalmente todos los elementos (logo, letras, iconos) para que queden a la misma altura */
+  padding: 20px; /* Espacio libre interno arriba, abajo y a los lados para que las letras no queden pegadas al borde */
+}
+
+/* 2. estilo del logo*/
+.logo-marca a {
+  font-size: 1.8rem; /* Tamaño de la letra del logo */
+  font-weight: 900; /* negrilla y letra gruesa */
+  letter-spacing: -1px; /* Junta un poquitico las letras */
+  color: #111111; 
+  text-decoration: none; /* Le quita la línea azul subrayada */
+}
+
+/* 3. Inicio, Niño, Elegante, Urbana*/
+.menu-navegacion ul {
+  display: flex; /* Pone las opciones del menú una al lado de la otra en fila horizontal */
+  list-style: none; /* Le quita los puntitos negros de lista viñeta que trae la etiqueta <ul> */
+  gap: 30px; /* Separa cada palabra del menú */
+  margin: 0; 
+  padding: 0; 
+}
+
+.menu-navegacion a {
+  text-decoration: none; /* Le quita el subrayado a los links del menú */
+  color: #555555; 
+  font-weight: bold; /*  negrita */
+  font-size: 0.95rem; /* Tamaño de letra */
+  text-transform: uppercase; /* Vuelve todo el texto a mayuscula */
+  transition: 0.3s; /* cuando pase el maus cambia  */
+}
+
+/* Lo que pasa cuando pones el mouse encima de una opción o cuando estás parado en esa página (.activo) */
+.menu-navegacion a:hover, 
+.menu-navegacion a.activo {
+  color: #004BEE; 
+}
+
+/*  4. Buscador e Iconos */
+.acciones-header {
+  display: flex; /* Pone en horizontal la fila */
+  align-items: center; /* Los centra perfectamente para que queden alineados entre sí */
+  gap: 20px; /* Separa el buscador y los iconos  */
+}
+
+.buscador-caja {
+  position: relative; /* Funciona como ancla para poder acomodar la lupa adentro de la caja de texto */
+  display: flex;
+  align-items: center;
+}
+
+.buscador-caja input {
+  padding: 8px 35px 8px 15px; /* Espacio interno de la derecha es para que el texto que escribas no tape la lupa */
+  border: 1px solid #cccccc; 
+  border-radius: 20px; /* Redondea las esquinas de la caja para que se vea moderna y ovalada */
+  outline: none; /* Quita ese borde negro feo que el navegador le pone a las cajas cuando das clic en ellas */
+  font-size: 0.85rem; /* Tamaño de la letra que escribe el usuario */
+  transition: 0.3s; /* Hace que el efecto de agrandarse sea suave */
+  width: 180px; /* Ancho inicial de la caja de búsqueda */
+}
+
+/* Efecto cuando el usuario da clic en la barra para empezar a escribir */
+.buscador-caja input:focus {
+  border-color: #004BEE; 
+  width: 220px; 
+}
+
+/* Posicionamiento de la Lupa */
+.icono-buscar {
+  position: absolute; /* Despega la lupa  */
+  right: 12px; /* Acomoda la lupa  */
+  font-size: 0.9rem; /* Tamaño del emoji de la lupa */
+  cursor: pointer; /* Cambia el cursor a la manito de clic cuando te parás en la lupa */
+}
+
+/* Botones de Usuario y Carrito */
+.btn-icono {
+  text-decoration: none; /* Quita subrayados */
+  font-size: 1.2rem; /* Hace que el carrito un poco más grande */
+  color: #111111;
+  position: relative; /* Necesario para que la bolita del carrito se acomode con base en el icono */
+  transition: 0.3s; /* Suaviza el cambio de color */
+}
+
+.btn-icono:hover {
+  color: #004BEE; 
+}
+
+/* La bolita azul con el número del carrito */
+.badge-carrito {
+  background-color: #004BEE;
+  color: white; 
+  font-size: 0.7rem; /* Numero pequeñito */
+  font-weight: bold; /* negrita  */
+  padding: 2px 6px; /* Le da la forma al numero del carrito */
+  border-radius: 50%; /* forma redonda */
+  position: absolute; /* Despega la bolita para ponerla flotando en una esquina */
+  top: -8px; /* La empuja hacia arriba del icono del carrito */
+  right: -10px; /* La empuja hacia la derecha del icono del carrito */
+}

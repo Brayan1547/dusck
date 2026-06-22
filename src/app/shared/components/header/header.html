@@ -1,1 +1,30 @@
-<p>header works!</p>
+<header class="header-dusck">
+  <div class="header-contenedor">
+    
+    <div class="logo-marca">
+      <a routerLink="/home">DUSCK</a>
+    </div>
+
+    <nav class="menu-navegacion">
+      <ul>
+        <li><a routerLink="/home" class="activo">Inicio</a></li>
+        <li><a routerLink="/product-details">Colección Niño</a></li>
+        <li><a routerLink="/product-details">Estilo Elegante</a></li>
+        <li><a routerLink="/product-details">Línea Urbana</a></li>
+      </ul>
+    </nav>
+
+    <div class="acciones-header">
+      <div class="buscador-caja">
+        <input type="text" placeholder="Buscar prendas...">
+        <span class="icono-buscar">🔍</span>
+      </div>
+      
+      <a routerLink="/login" class="btn-icono" title="Mi Cuenta">👤</a>
+      <a routerLink="/checkout" class="btn-icono mi-carrito" title="Carrito">
+        🛒 <span class="badge-carrito">0</span>
+      </a>
+    </div>
+
+  </div>
+</header>
