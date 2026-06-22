@@ -1,0 +1,56 @@
+/* 1. FONDO Y MARGENES DEL FOOTER */
+.footer-dusck {
+  background-color: #111111; 
+  color: #ffffff; 
+  padding: 60px 20px 20px 20px; /* Espacio interno */
+  font-family: 'Arial', sans-serif;
+  margin-top: 50px; /* Separa el footer de las fotos del Main */
+}
+
+/* Contenedor que centra y alinea las dos columnas */
+.footer-contenedor {
+  max-width: 1200px; /* Mismo ancho del Header para que todo cuadre */
+  margin: 0 auto; /* Centra el bloque en la mitad de la pantalla */
+  display: flex; /* Pone las dos columnas en fila (una al lado de la otra) */
+  flex-wrap: wrap; /* Si se mira en celular, baja la segunda columna automáticamente */
+  justify-content: space-between; /* Deja espacio libre en la mitad de las dos columnas */
+  gap: 40px; /* Distancia mínima de seguridad entre ellas */
+}
+
+/* estilo de las columnas y textos*/
+.footer-columna {
+  flex: 1; /* Hace que las dos columnas tengan el mismo ancho */
+  min-width: 280px; /* Evita que las columnas se aplasten en pantallas medianas */
+}
+
+/* Títulos principales (DUSCK y Soporte) */
+.footer-columna h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px; /* Separa el título del texto de abajo */
+  text-transform: uppercase; /* Vuelve el título a mayuscula */
+  letter-spacing: 1px; /* Separa un poquito las letras */
+}
+
+/* Párrafos de texto y datos de contacto */
+.footer-columna p {
+  font-size: 0.9rem;
+  color: #cccccc; /* Gris claro para que no canse la vista sobre el negro */
+  line-height: 1.6; /* Separa los renglones para que no se vean amontonados */
+  margin: 10px 0;
+}
+
+/* barra de derechos de autos */
+.footer-derechos {
+  max-width: 1200px;
+  margin: 40px auto 0 auto; /* Espacio arriba para separarlo de las columnas */
+  padding-top: 20px;
+  border-top: 1px solid #333333;
+  text-align: center; /* Centra el texto en la mitad */
+}
+
+.footer-derechos p {
+  font-size: 0.8rem; /* Letra pequeña discreta */
+  color: #777777; /* Gris oscuro para que no resalte tanto */
+  margin: 0;
+}
