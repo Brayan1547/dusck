@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-collection-nino',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './header.html',
-  styleUrl: './header.css',
+  templateUrl: './collection-nino.html',
+  styleUrl: './collection-nino.css',
 })
-export class Header {}
+export class CollectionNino {}
