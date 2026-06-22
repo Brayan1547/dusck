@@ -1,0 +1,165 @@
+/* 1. baner principal */
+.banner-ninos {
+  background-color: #111111; 
+  color: #ffffff; 
+  text-align: center; /* Centra el texto */
+  padding: 40px 20px; /* Espaciado interno arriba/abajo y a los lados */
+  margin-bottom: 30px; /* Separación hacia abajo */
+  border-radius: 8px; /* Bordes ligeramente redondeados */
+}
+
+.contenido-banner h1 {
+  font-size: 2.5rem; /* Título grande e imponente */
+  margin-bottom: 10px; /* Separación inferior del texto */
+  font-weight: bold; /* Texto en negrita */
+}
+
+.contenido-banner p {
+  font-size: 1.2rem; /* Subtítulo legible */
+  color: #cccccc; 
+}
+
+/* 2. contenedor de filtros */
+.contenedor-filtros {
+  display: flex; /* Acomoda los botones en fila horizontal */
+  justify-content: center; /* Centra los botones en la pantalla */
+  gap: 15px; /* Espacio de separación entre cada botón */
+  margin-bottom: 40px; /* Separación antes de que empiecen los productos */
+  flex-wrap: wrap; /* Permite que bajen de línea si la pantalla es muy pequeña */
+}
+
+.boton-filtro {
+  background-color: #f0f0f0; 
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Tamaño del botón */
+  font-size: 1rem; /* Tamaño de letra estándar */
+  border-radius: 20px; /* Bordes totalmente redondeados tipo píldora */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  transition: all 0.3s ease; /* Efecto suave al pasar el mouse */
+}
+
+.boton-filtro:hover {
+  background-color: #dddddd; 
+}
+
+.boton-filtro.activo {
+  background-color: #000000; /* Fondo  para el botón seleccionado */
+  color: #ffffff; 
+  font-weight: bold; /* negrita */
+}
+
+/* 3. cuadricula la ropa  */
+.cuadricula-productos {
+  display: grid; /* Cuadrícula moderna */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Las tarjetas se acomodan solas según la pantalla */
+  gap: 30px; /* Distancia entre las tarjetas de los productos */
+  max-width: 1200px; /* Ancho máximo para que no se estire demasiado en pantallas gigantes */
+  margin: 0 auto; /* Centra toda la cuadrícula en la página */
+  padding: 0 20px; /* Relleno a los lados */
+}
+
+/* 4. tarjeta de cada ropa */
+.tarjeta-producto {
+  background-color: #ffffff; 
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta lo que se salga de la tarjeta */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Sombra suave y elegante */
+  display: flex; /* Acomoda la imagen arriba y la info abajo */
+  flex-direction: column; /* Organiza los elementos en columna vertical */
+  justify-content: space-between; /* Empuja el botón de compra siempre al fondo */
+  height: 100%; /* Ocupa todo el alto disponible */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+}
+
+.tarjeta-producto:hover {
+  transform: translateY(-5px); /* La tarjeta levanta un poquito al pasar el mouse */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra más marcada al pasar el mouse */
+}
+
+/* 5. contenedor de imagen */
+.contenedor-imagen {
+  position: relative; /* Posiciona etiquetas flotantes dentro de la imagen */
+  width: 100%; /* Ancho completo */
+  height: 300px; /* Altura fija para todas las imágenes */
+  overflow: hidden; /* Corta la imagen si excede el tamaño */
+  border-top-left-radius: 10px; /* Redondea la esquina superior izquierda */
+  border-top-right-radius: 10px; /* Redondea la esquina superior derecha */
+}
+
+.imagen-producto {
+  width: 100%; /* Ocupa todo el ancho */
+  height: 100%; /* Ocupa todo el alto */
+  object-fit: cover; /* La imagen se recorta sola para no deformarse */
+  transition: transform 0.5s ease; /* Animación de movimiento */
+}
+
+.tarjeta-producto:hover .imagen-producto {
+  transform: scale(1.05); /* La imagen hace un ligero zoom al pasar el mouse */
+}
+
+/* etiqueta flotantes de las img "mas vendido" */
+.etiqueta-nuevo, .etiqueta-vendido {
+  position: absolute; /* Posicionamiento exacto encima de la foto */
+  top: 15px; /* Distancia desde arriba */
+  left: 15px; /* Distancia desde la izquierda */
+  padding: 5px 10px; /* Relleno interno */
+  font-size: 0.75rem; /* Tamaño de letra pequeño */
+  font-weight: bold; /* Texto en negrita */
+  border-radius: 4px; /* Bordes ligeramente redondeados */
+  color: #ffffff; /* Texto blanco por defecto */
+}
+
+.etiqueta-nuevo {
+  background-color: #28a745; /* Verde para producto nuevo */
+}
+
+.etiqueta-vendido {
+  background-color: #ffc107; /* Amarillo para más vendido */
+  color: #000000; /* Letra negra para contraste */
+}
+
+/* 6. informacion del producto "texto" */
+.informacion-producto {
+  padding: 20px; /* Espaciado interno de relleno */
+  display: flex; /* Acomoda los textos en columna */
+  flex-direction: column;
+  flex-grow: 1; /* Ocupa el espacio restante para empujar el botón abajo */
+}
+
+.informacion-producto h3 {
+  font-size: 1.2rem; /* Tamaño del título */
+  margin-bottom: 8px; /* Separación inferior */
+  color: #333333; 
+}
+
+.precio {
+  font-size: 1.3rem; /* Tamaño grande para el precio */
+  font-weight: bold; /* Texto en negrita */
+  color: #000000; 
+  margin-bottom: 12px; /* Separación hacia abajo */
+}
+
+.descripcion {
+  font-size: 0.95rem; /* Tamaño de letra cómodo de leer */
+  color: #666666; 
+  margin-bottom: 20px; /* Margen inferior de separación */
+  flex-grow: 1; /* Se estira para rellenar el espacio */
+}
+
+/* 7. boton de ver detalle */
+.boton-detalle {
+  width: 100%; /* Ocupa todo el ancho de la tarjeta */
+  background-color: #000000; /* Fondo negro corporativo */
+  color: #ffffff; /* Texto de color blanco */
+  border: none; /* Sin borde */
+  padding: 12px; /* Relleno interno para darle altura */
+  font-size: 0.95rem; /* Tamaño de letra del botón */
+  font-weight: bold; /* Texto en negrita */
+  border-radius: 6px; /* Esquinas ligeramente redondeadas */
+  cursor: pointer; /* Cambia el cursor al poner el mouse encima */
+  transition: background-color 0.3s ease, opacity 0.3s; /* Animación de clic suave */
+}
+
+.boton-detalle:hover {
+  background-color: #333333; /* Fondo gris oscuro al poner el mouse encima */
+}

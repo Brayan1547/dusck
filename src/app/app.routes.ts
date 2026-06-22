@@ -6,6 +6,7 @@ import { Checkout } from './features/checkout/checkout';
 import { PageNotFoud } from './features/page-not-foud/page-not-foud';
 import { ProductDetalls } from './features/product-detalls/product-detalls';
 import { CollectionNino } from './features/collection-nino/collection-nino';
+import { CollectionElegante } from './features/collection-elegante/collection-elegante';
 
 export const routes: Routes = [
     {path: 'home', component: Home},
@@ -15,6 +16,7 @@ export const routes: Routes = [
     {path: '404', component : PageNotFoud},
     {path: 'product/detalls', component: ProductDetalls},
     {path: 'coleccion-nino', component: CollectionNino},
+    {path: 'coleccion-elegante', component: CollectionElegante},
     {path: ' ', redirectTo: 'Home', pathMatch: 'full'},
     {path: '**', redirectTo: '404', pathMatch: 'full'}
     
