@@ -1,23 +1,27 @@
 import { Routes } from '@angular/router';
+
 import { Home } from './features/home/home';
-import { Login } from './features/login/login';
-import { Register } from './features/register/register';
-import { Checkout } from './features/checkout/checkout';
-import { PageNotFoud } from './features/page-not-foud/page-not-foud';
-import { ProductDetalls } from './features/product-detalls/product-detalls';
-import { CollectionNino } from './features/collection-nino/collection-nino';
-import { CollectionElegante } from './features/collection-elegante/collection-elegante';
+
+
 
 export const routes: Routes = [
-    {path: 'home', component: Home},
-    {path: 'login', component: Login},
-    {path: 'register', component: Register},
-    {path: 'checkout', component: Checkout},
-    {path: '404', component : PageNotFoud},
-    {path: 'product/detalls', component: ProductDetalls},
-    {path: 'coleccion-nino', component: CollectionNino},
-    {path: 'coleccion-elegante', component: CollectionElegante},
-    {path: ' ', redirectTo: 'Home', pathMatch: 'full'},
-    {path: '**', redirectTo: '404', pathMatch: 'full'}
+    { path: 'home', component: Home },
+
+    { path: 'login', loadComponent: () => import('./features/login/login').then(m => m.Login) },
     
+    { path: 'register', loadComponent: () => import('./features/register/register').then(m => m.Register) },
+
+    { path: 'checkout', loadComponent: () => import('./features/checkout/checkout').then(m => m.Checkout) },
+
+    { path: '404', loadComponent: () => import('./features/page-not-foud/page-not-foud').then(m => m.PageNotFoud) },
+
+    { path: 'product/detalls', loadComponent: () => import('./features/product-detalls/product-detalls').then(m => m.ProductDetalls) },
+
+    { path: 'coleccion-nino', loadComponent: () => import('./features/collection-nino/collection-nino').then(m => m.CollectionNino) },
+    
+    { path: 'coleccion-elegante', loadComponent: () => import('./features/collection-elegante/collection-elegante').then(m => m.CollectionElegante) },
+
+    { path: ' ', redirectTo: 'Home', pathMatch: 'full' },
+    { path: '**', redirectTo: '404', pathMatch: 'full' }
+
 ];
