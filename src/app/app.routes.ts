@@ -21,6 +21,8 @@ export const routes: Routes = [
 
     { path: 'coleccion-elegante', loadComponent: () => import('./features/collection-elegante/collection-elegante').then(m => m.CollectionElegante) },
 
+    { path: 'user/list', loadComponent: () => import('./features/users/user-list/user-list').then(m => m.UserList) },
+
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: '**', redirectTo: '404', pathMatch: 'full' }
 
